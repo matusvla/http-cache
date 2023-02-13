@@ -29,8 +29,9 @@ import (
 
 	redisCache "github.com/go-redis/cache/v7"
 	goredis "github.com/go-redis/redis/v7"
-	cache "github.com/victorspringer/http-cache"
 	"github.com/vmihailenco/msgpack"
+
+	cache "github.com/matusvla/http-cache"
 )
 
 // Adapter is the memory adapter data structure.
