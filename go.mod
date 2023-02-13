@@ -1,22 +1,23 @@
-module github.com/victorspringer/http-cache
+module github.com/matusvla/http-cache
 
 go 1.18
 
 require (
 	github.com/allegro/bigcache v1.2.1
-	github.com/go-redis/cache v6.4.0+incompatible
-	github.com/go-redis/redis v6.15.9+incompatible
+	github.com/go-redis/cache/v7 v7.0.2
+	github.com/go-redis/redis/v7 v7.4.1
+	github.com/victorspringer/http-cache v0.0.0-20221205073845-df6d061f29cb
 	github.com/vmihailenco/msgpack v4.0.4+incompatible
 )
 
 require (
+	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
-	github.com/google/go-cmp v0.5.9 // indirect
-	github.com/onsi/ginkgo v1.16.5 // indirect
-	github.com/onsi/gomega v1.24.1 // indirect
-	github.com/stretchr/testify v1.8.1 // indirect
+	github.com/kr/pretty v0.2.1 // indirect
+	github.com/nxadm/tail v1.4.8 // indirect
+	github.com/pmezard/go-difflib v1.0.0 // indirect
 	golang.org/x/net v0.2.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/protobuf v1.28.0 // indirect
-	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
