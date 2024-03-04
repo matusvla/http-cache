@@ -10,7 +10,7 @@ import (
 
 	"github.com/allegro/bigcache"
 
-	"github.com/matusvla/http-cache/adapter/memory"
+	"github.com/vl-dev/http-cache/adapter/memory"
 )
 
 const (

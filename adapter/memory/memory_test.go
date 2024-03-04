@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	cache "github.com/matusvla/http-cache"
+	cache "github.com/vl-dev/http-cache"
 )
 
 func TestGet(t *testing.T) {

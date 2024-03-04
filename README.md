@@ -1,5 +1,5 @@
 # http-cache
-[![Build Status](https://travis-ci.org/matusvla/http-cache.svg?branch=master)](https://travis-ci.org/matusvla/http-cache) [![Coverage Status](https://coveralls.io/repos/github/matusvla/http-cache/badge.svg?branch=master)](https://coveralls.io/github/matusvla/http-cache?branch=master) [![](https://img.shields.io/badge/godoc-reference-5272B4.svg?style=flat)](https://godoc.org/github.com/matusvla/http-cache)
+[![Build Status](https://travis-ci.org/matusvla/http-cache.svg?branch=master)](https://travis-ci.org/matusvla/http-cache) [![Coverage Status](https://coveralls.io/repos/github/matusvla/http-cache/badge.svg?branch=master)](https://coveralls.io/github/matusvla/http-cache?branch=master) [![](https://img.shields.io/badge/godoc-reference-5272B4.svg?style=flat)](https://godoc.org/github.com/vl-dev/http-cache)
 
 This is a high performance Golang HTTP middleware for server-side application layer caching, ideal for REST APIs.
 
@@ -10,7 +10,7 @@ The memory adapter minimizes GC overhead to near zero and supports some options 
 ## Getting Started
 
 ### Installation
-`go get github.com/matusvla/http-cache`
+`go get github.com/vl-dev/http-cache`
 
 ### Usage
 This is an example of use with the memory adapter:
@@ -24,8 +24,8 @@ import (
     "os"
     "time"
     
-    "github.com/matusvla/http-cache"
-    "github.com/matusvla/http-cache/adapter/memory"
+    "github.com/vl-dev/http-cache"
+    "github.com/vl-dev/http-cache/adapter/memory"
 )
 
 func example(w http.ResponseWriter, r *http.Request) {
@@ -62,8 +62,8 @@ func main() {
 Example of Client initialization with Redis adapter:
 ```go
 import (
-    "github.com/matusvla/http-cache"
-    "github.com/matusvla/http-cache/adapter/redis"
+    "github.com/vl-dev/http-cache"
+    "github.com/vl-dev/http-cache/adapter/redis"
 )
 
 ...
@@ -133,9 +133,9 @@ http-cache memory adapter takes way less GC pause time, that means smaller GC ov
 - If you are using this package in a production environment, please let me know! :)
 
 ## Godoc Reference
-- [http-cache](https://godoc.org/github.com/matusvla/http-cache)
-- [Memory adapter](https://godoc.org/github.com/matusvla/http-cache/adapter/memory)
-- [Redis adapter](https://godoc.org/github.com/matusvla/http-cache/adapter/redis)
+- [http-cache](https://godoc.org/github.com/vl-dev/http-cache)
+- [Memory adapter](https://godoc.org/github.com/vl-dev/http-cache/adapter/memory)
+- [Redis adapter](https://godoc.org/github.com/vl-dev/http-cache/adapter/redis)
 
 ## License
-http-cache is released under the [MIT License](https://github.com/matusvla/http-cache/blob/master/LICENSE).
+http-cache is released under the [MIT License](https://github.com/vl-dev/http-cache/blob/master/LICENSE).

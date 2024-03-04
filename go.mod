@@ -1,4 +1,4 @@
-module github.com/matusvla/http-cache
+module github.com/vl-dev/http-cache
 
 go 1.18
 

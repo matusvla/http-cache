@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/matusvla/http-cache"
+	"github.com/vl-dev/http-cache"
 )
 
 var a cache.Adapter

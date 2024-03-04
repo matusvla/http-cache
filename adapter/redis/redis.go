@@ -31,7 +31,7 @@ import (
 	goredis "github.com/go-redis/redis/v7"
 	"github.com/vmihailenco/msgpack"
 
-	cache "github.com/matusvla/http-cache"
+	cache "github.com/vl-dev/http-cache"
 )
 
 // Adapter is the memory adapter data structure.

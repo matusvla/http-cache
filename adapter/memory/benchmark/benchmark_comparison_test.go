@@ -8,8 +8,8 @@ import (
 
 	"github.com/allegro/bigcache"
 
-	cache "github.com/matusvla/http-cache"
-	"github.com/matusvla/http-cache/adapter/memory"
+	cache "github.com/vl-dev/http-cache"
+	"github.com/vl-dev/http-cache/adapter/memory"
 )
 
 const maxEntrySize = 256
