@@ -5,17 +5,18 @@ import (
 	"testing"
 	"time"
 
+	"github.com/go-redis/redis/v7"
+
 	"github.com/vl-dev/http-cache"
 )
 
 var a cache.Adapter
 
 func TestSet(t *testing.T) {
-	a = NewAdapter(&RingOptions{
-		Addrs: map[string]string{
-			"server": ":6379",
-		},
+	rcl := redis.NewClient(&redis.Options{
+		Addr: ":6379",
 	})
+	a = NewAdapter(rcl)
 
 	tests := []struct {
 		name     string
