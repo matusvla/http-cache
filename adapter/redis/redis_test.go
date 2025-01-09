@@ -1,22 +1,19 @@
 package redis
 
 import (
+	"github.com/redis/go-redis/v9"
 	"reflect"
 	"testing"
 	"time"
 
-	"github.com/go-redis/redis/v7"
-
-	"github.com/vl-dev/http-cache"
+	cache "github.com/vl-dev/http-cache"
 )
-
-var a cache.Adapter
 
 func TestSet(t *testing.T) {
 	rcl := redis.NewClient(&redis.Options{
 		Addr: ":6379",
 	})
-	a = NewAdapter(rcl)
+	a := NewAdapter(rcl)
 
 	tests := []struct {
 		name     string
@@ -25,7 +22,7 @@ func TestSet(t *testing.T) {
 	}{
 		{
 			"sets a response cache",
-			1,
+			100,
 			cache.Response{
 				Value:      []byte("value 1"),
 				Expiration: time.Now().Add(1 * time.Minute),
@@ -56,6 +53,11 @@ func TestSet(t *testing.T) {
 }
 
 func TestGet(t *testing.T) {
+	rcl := redis.NewClient(&redis.Options{
+		Addr: ":6379",
+	})
+	a := NewAdapter(rcl)
+
 	tests := []struct {
 		name string
 		key  uint64
@@ -64,7 +66,7 @@ func TestGet(t *testing.T) {
 	}{
 		{
 			"returns right response",
-			1,
+			100,
 			[]byte("value 1"),
 			true,
 		},
@@ -97,6 +99,11 @@ func TestGet(t *testing.T) {
 }
 
 func TestRelease(t *testing.T) {
+	rcl := redis.NewClient(&redis.Options{
+		Addr: ":6379",
+	})
+	a := NewAdapter(rcl)
+
 	tests := []struct {
 		name string
 		key  uint64
